@@ -1,99 +1,75 @@
-import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../../../core/constants/app/app_colors.dart';
-import '../../widgets/custom_bottom_app_bar.dart';
 import '../model/chat_model.dart';
 import '../model/story_model.dart';
 import '../widgets/add_story_card.dart';
 import '../widgets/message_card.dart';
 import '../widgets/story_card.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
 
-class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,  
-          children: [
-            SvgPicture.asset(
-              "assets/images/logo.svg",
-              height: 30,
-              color: AppColors.primary,
-            ),
-            Text('Baynarkozcu Chat App', style: context.theme.textTheme.headline1),
-          ],
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 20,
+          ),
         ),
-      ),
-      body: CustomScrollView(
-        slivers: [
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 20,
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              children: const [
+                Text("Stories"),
+                Spacer(),
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(Icons.history),
+                ),
+                Text("All Stories"),
+              ],
             ),
           ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Row(
-                children: const [
-                  Text("Stories"),
-                  Spacer(),
-                  Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: Icon(Icons.history),
-                  ),
-                  Text("All Stories"),
-                ],
-              ),
-            ),
+        ),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 10,
           ),
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 10,
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 200,
-              child: ListView.builder(
-                itemCount: StoryModel.storiesList.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  if (index == 0) {
-                    return const AddStoryCard();
-                  }
-                  return StoryCard(
-                    story: StoryModel.storiesList[index],
-                  );
-                },
-              ),
-            ),
-          ),
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 20,
-            ),
-          ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                return MessageCard(chat: ChatModel.chatList[index]);
+        ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 200,
+            child: ListView.builder(
+              itemCount: StoryModel.storiesList.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                if (index == 0) {
+                  return const AddStoryCard();
+                }
+                return StoryCard(
+                  story: StoryModel.storiesList[index],
+                );
               },
-              childCount: ChatModel.chatList.length,
             ),
           ),
-        ],
-      ),
-      bottomNavigationBar: const CustomBottomAppBar(),
+        ),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 20,
+          ),
+        ),
+        SliverList(
+          delegate: SliverChildBuilderDelegate(
+            (context, index) {
+              return MessageCard(chat: ChatModel.chatList[index]);
+            },
+            childCount: ChatModel.chatList.length,
+          ),
+        ),
+      ],
     );
   }
 }

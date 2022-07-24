@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../components/icon_with_notification.dart';
-import '../../core/constants/app/app_colors.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
   const CustomBottomAppBar({
@@ -28,10 +27,14 @@ class CustomBottomAppBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-              IconWithNotification(),
-              Icon(Icons.home, size: 24, color: AppColors.text),
-              Icon(Icons.storefront_sharp, size: 24, color: AppColors.text),
-              Icon(Icons.settings, size: 24, color: AppColors.text),
+              IconWithNotification(
+                icon: Icons.messenger,
+                isActive: true,
+                isAlert: true,
+              ),
+              IconWithNotification(icon: Icons.home),
+              IconWithNotification(icon: Icons.storefront_sharp),
+              IconWithNotification(icon: Icons.settings),
             ],
           ),
         ));

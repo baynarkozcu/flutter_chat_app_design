@@ -58,6 +58,7 @@ class StoryCard extends StatelessWidget {
               ),
               border: Border.all(
                 color: AppColors.primary,
+                width: 3,
               ),
             ),
           ),

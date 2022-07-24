@@ -55,7 +55,7 @@ class LightTheme extends BaseTheme {
           ),
         ),
         appBarTheme: const AppBarTheme(
-          color: Colors.transparent,
+          backgroundColor: Colors.transparent,
           centerTitle: true,
           elevation: 0,
           // iconTheme: IconThemeData(color: ApplicationColors.accentColor),
