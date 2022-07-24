@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'core/init/theme/theme_manager.dart';
+import 'feature/home/view/home_view.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -21,14 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Baynarkozcu Chat App',
       theme: context.theme,
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'Hello World6576776',
-            style: context.theme.textTheme.headline1,
-          ),
-        ),
-      ),
+      home: HomeView(),
     );
   }
 }

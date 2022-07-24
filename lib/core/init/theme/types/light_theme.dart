@@ -20,7 +20,8 @@ class LightTheme extends BaseTheme {
         scaffoldBackgroundColor: AppColors.background,
         textTheme: const TextTheme(
           headline1: TextStyle(
-            color: AppColors.text,
+            // color: AppColors.text,
+            color: AppColors.primary,
           ),
           headline2: TextStyle(
             color: AppColors.text,
