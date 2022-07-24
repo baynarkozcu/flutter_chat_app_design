@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../core/constants/app/app_colors.dart';
 import '../../../core/constants/enums/tabbar_view_enums.dart';
 import 'home/view/home_view.dart';
+import 'settings/view/settings_view.dart';
 
 class MasterPage extends StatefulWidget {
   const MasterPage({Key? key}) : super(key: key);
@@ -28,10 +29,15 @@ class _HomeViewState extends State<MasterPage> with TickerProviderStateMixin {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                "assets/images/logo.svg",
-                height: 30,
-                color: AppColors.primary,
+              Padding(
+                padding: const EdgeInsets.only(
+                  right: 10,
+                ),
+                child: SvgPicture.asset(
+                  "assets/images/logo.svg",
+                  height: 30,
+                  color: AppColors.primary,
+                ),
               ),
               Text('Baynarkozcu Chat App', style: context.theme.textTheme.headline1),
             ],
@@ -58,12 +64,10 @@ class _HomeViewState extends State<MasterPage> with TickerProviderStateMixin {
           controller: _tabController,
           children: [
             Container(
-              color: Colors.yellow,
+              color: AppColors.primary,
             ),
             const HomeView(),
-            Container(
-              color: Colors.purple,
-            ),
+            const SettingsView(),
           ],
         ));
   }

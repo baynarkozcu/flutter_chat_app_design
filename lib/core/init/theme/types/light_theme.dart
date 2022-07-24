@@ -17,7 +17,7 @@ class LightTheme extends BaseTheme {
         brightness: Brightness.light,
         primaryColor: AppColors.primary,
         backgroundColor: AppColors.background,
-        scaffoldBackgroundColor: AppColors.background,
+        scaffoldBackgroundColor: Colors.grey.shade300,
         textTheme: const TextTheme(
           headline1: TextStyle(
             // color: AppColors.text,
