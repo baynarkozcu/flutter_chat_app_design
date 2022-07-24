@@ -2,6 +2,7 @@ import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/custom_bottom_app_bar.dart';
+import '../model/story_model.dart';
 import '../widgets/add_story_card.dart';
 import '../widgets/message_card.dart';
 import '../widgets/story_card.dart';
@@ -51,13 +52,13 @@ class _HomeViewState extends State<HomeView> {
             child: SizedBox(
               height: 200,
               child: ListView.builder(
-                itemCount: 10,
+                itemCount: StoryModel.storiesList.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   if (index == 0) {
                     return const AddStoryCard();
                   }
-                  return const StoryCard();
+                  return StoryCard(story:  StoryModel.storiesList[index],);
                 },
               ),
             ),

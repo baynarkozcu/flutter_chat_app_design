@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/app/app_colors.dart';
+import '../model/story_model.dart';
+
 class StoryCard extends StatelessWidget {
   const StoryCard({
     Key? key,
+    required this.story,
   }) : super(key: key);
+
+  final StoryModel story;
 
   @override
   Widget build(BuildContext context) {
@@ -16,29 +22,28 @@ class StoryCard extends StatelessWidget {
               height: 120,
               width: 80,
               margin: const EdgeInsets.symmetric(horizontal: 10),
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.vertical(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.vertical(
                   top: Radius.circular(10),
                   bottom: Radius.circular(
                     25,
                   ),
                 ),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black26,
                     blurRadius: 7,
                   )
                 ],
-                color: Colors.grey,
-                // image: const DecorationImage(
-                //   image: AssetImage('assets/images/user_profile_image.png'),
-                //   fit: BoxFit.cover,
-                // ),
+                image: DecorationImage(
+                  image: NetworkImage(story.storyPhotoUrl),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             const SizedBox(height: 25),
-            const Text("Username"),
-            const Text("Username"),
+            Text(story.userName),
+            Text(story.userSurname),
           ],
         ),
         Positioned(
@@ -48,9 +53,11 @@ class StoryCard extends StatelessWidget {
             width: 40,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white,
+              image: DecorationImage(
+                image: NetworkImage(story.userPhotoUrl),
+              ),
               border: Border.all(
-                color: Colors.black,
+                color: AppColors.primary,
               ),
             ),
           ),
