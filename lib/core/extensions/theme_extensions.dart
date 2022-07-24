@@ -7,7 +7,7 @@ import '../init/theme/types/dark_theme.dart';
 import '../init/theme/types/light_theme.dart';
 
 extension ThemeContextExtension on BuildContext {
-  ThemeData get theme => watch<ThemeNotifier>().currentTheme;
+  ThemeData get theme => watch<ThemeManager>().currentTheme;
 }
 
 extension ThemeEnumExtension on ThemeEnums {

@@ -1,9 +1,16 @@
 import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'core/init/theme/theme_manager.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => ThemeManager.instance),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +21,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Baynarkozcu Chat App',
       theme: context.theme,
-      home: const HomePage(),
+      home: Scaffold(
+        body: Center(
+          child: Text(
+            'Hello World6576776',
+            style: context.theme.textTheme.headline1,
+          ),
+        ),
+      ),
     );
   }
 }

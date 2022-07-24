@@ -4,14 +4,14 @@ import '../../extensions/theme_extensions.dart';
 import '../../constants/enums/theme_enums.dart';
 import 'interface_theme_manager.dart';
 
-class ThemeNotifier extends ChangeNotifier implements IThemeManager {
-  static ThemeNotifier? _instance;
-  static ThemeNotifier get instance {
-    _instance ??= ThemeNotifier._init();
+class ThemeManager extends ChangeNotifier implements IThemeManager {
+  static ThemeManager? _instance;
+  static ThemeManager get instance {
+    _instance ??= ThemeManager._init();
     return _instance!;
   }
 
-  ThemeNotifier._init();
+  ThemeManager._init();
 
   @override
   ThemeData currentTheme = ThemeEnums.LIGHT.generateTheme;
@@ -19,13 +19,11 @@ class ThemeNotifier extends ChangeNotifier implements IThemeManager {
 
   @override
   void changeTheme(ThemeEnums themeType) {
-    if(themeType != currentThemeEnum){
+    if (themeType != currentThemeEnum) {
       currentThemeEnum = themeType;
       currentTheme = themeType.generateTheme;
       notifyListeners();
     }
     return;
   }
-
-
 }
