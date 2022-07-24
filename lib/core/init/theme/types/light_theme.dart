@@ -80,7 +80,7 @@ class LightTheme extends BaseTheme {
           alignment: Alignment.center,
         )),
         iconTheme: const IconThemeData(
-          // color: ApplicationColors.bgColor,
+          color: AppColors.primary,
           size: 16,
         ),
         cardTheme: CardTheme(

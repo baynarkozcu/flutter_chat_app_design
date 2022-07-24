@@ -1,7 +1,9 @@
 import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/custom_bottom_app_bar.dart';
 import '../widgets/add_story_card.dart';
+import '../widgets/message_card.dart';
 import '../widgets/story_card.dart';
 
 class HomeView extends StatefulWidget {
@@ -46,23 +48,33 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
           SliverToBoxAdapter(
-              child: SizedBox(
-            height: 200,
-            child: ListView.builder(
-              itemCount: 10,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                if (index == 0) {
-                  return const AddStoryCard();
-                }
-                return const StoryCard();
-              },
+            child: SizedBox(
+              height: 200,
+              child: ListView.builder(
+                itemCount: 10,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  if (index == 0) {
+                    return const AddStoryCard();
+                  }
+                  return const StoryCard();
+                },
+              ),
             ),
-          )),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+              return const MessageCard();
+            }, childCount: 10),
+          ),
         ],
       ),
+      bottomNavigationBar: const CustomBottomAppBar(),
     );
   }
 }
-
-
