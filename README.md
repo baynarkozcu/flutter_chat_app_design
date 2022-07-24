@@ -30,7 +30,7 @@
 
 Daha önceki tema yönetimi için yaptığım uygulama [örneğine](#https://github.com/baynarkozcu/flutter_shop_app_design) ek olarak daha detaylı bir tema yönetimi oluşturdum. Tasarımın en başından detaylı bir tema yönetimi çıkartmak için okuduğum farklı makale ve içeriklerden yola çıkarak daha sonraları hazır bir şekilde kullanabileceğim bir Dinamik Theme Management yapısı oluşturdum. Uzun süredir hedeflediğim kendi flutter kütüphanemin ilk kısmı olan Theme kısmını hallettim. Umarım diğer kısımlarda (network, cache vb.) çok geçmeden tamam olacaktır. 
 
-Ayrıca bu tasarım [BM Studio](#https://www.youtube.com/channel/UC7vfizO44OTBJuqNaE6fMYg) adlı youtube kanalına aittir. Ben kendime göre dosya yapısını ve tasarımlarını güncelledim.
+Ayrıca bu tasarım(Home Page) [BM Studio](#https://www.youtube.com/channel/UC7vfizO44OTBJuqNaE6fMYg) adlı youtube kanalına aittir. Ben kendime göre dosya yapısını ve tasarımlarını güncelledim.
 
 <br>
 Kullanışlı ve güzel components için aşağıdaki görseli ve kod içeriğini detaylı bir şekilde inceleyebilirsiniz.
