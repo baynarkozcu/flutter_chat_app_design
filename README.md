@@ -37,10 +37,21 @@ Kullanışlı ve güzel components için aşağıdaki görseli ve kod içeriğin
 
 <br>
 
-<img src="https://user-images.githubusercontent.com/61154446/180652557-5e839b33-4793-47e4-b2da-b00cfa084f6e.png" width="400">
+<img src="https://user-images.githubusercontent.com/61154446/180663138-10204a3b-6c8c-4bdb-a351-7b8dd1620340.png" width="400">
+
+<br>
+
+<a name = "dark_mode"><img src="https://user-images.githubusercontent.com/61154446/180663003-e5633619-6baf-4d19-8c88-d4bdade152df.png" width="400"></a>
+
+<br>
+
+<a name = "settings_page"><img src="https://user-images.githubusercontent.com/61154446/180663017-603c261f-80cf-4f75-ab40-8cc6275fda7f.png" width="400"></a>
+
 
 <br>
 <br>
+
+
 
 ## 🏁 Eklenecekler <a name = "todos"></a>
 
@@ -49,7 +60,8 @@ Kullanışlı ve güzel components için aşağıdaki görseli ve kod içeriğin
 - [Auth Pages](https://github.com/baynarkozcu) - Kullanıcıların register ve login olmaları için gerekli sayfa tasarımları ve bu sayfaların kodlanması.
 - [Message Page](https://github.com/baynarkozcu) - Kullanıcıların mesajlaştığı sayfanın tasarlanması(Eğer youtube ve internette hoşuma gidecek farklı bir tasarım bulabilirsem onuda kendime göre revize edip ekleyebilirim.) ve kod a dökülmesi
 - [Profil Page](https://github.com/baynarkozcu) - Kullanıcıların bilgilerini görüntüleyebildikleri ve güncelleyebildikleri sayfanın tasarım ve kodlanması.
-- [Settings Page](https://github.com/baynarkozcu) - Uygulama ayarlarının yapılandırılabildiği sayfa.
+- <del>[Settings Page](#settings_page) - Uygulama ayarlarının yapılandırılabildiği sayfa. Tema Değişikliğide bu sayfa içerisinden kontrol edilmektedir.</del>
+- <del>[Dark Mode](#dark_mode) - Uygulama içerisine dinamik tema değişikliği eklenmiştir. Fakat DarkTheme içeriside iyi bir şekilde doldurulması gerekmektedir.</del>
 
 <br>
 
