@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../constants/enums/theme_enums.dart';
-import '../init/notifier/theme_notifier.dart';
-import '../init/theme/dark_theme.dart';
-import '../init/theme/light_theme.dart';
+import '../init/theme/theme_manager.dart';
+import '../init/theme/types/dark_theme.dart';
+import '../init/theme/types/light_theme.dart';
 
 extension ThemeContextExtension on BuildContext {
   ThemeData get theme => watch<ThemeNotifier>().currentTheme;

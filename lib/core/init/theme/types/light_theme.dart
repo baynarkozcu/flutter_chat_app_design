@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../base/base_theme.dart';
-import '../../constants/app/app_colors.dart';
+import '../../../base/base_theme.dart';
+import '../../../constants/app/app_colors.dart';
 
 class LightTheme extends BaseTheme {
   static LightTheme? _instance;

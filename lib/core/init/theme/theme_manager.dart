@@ -1,15 +1,10 @@
-import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 
+import '../../extensions/theme_extensions.dart';
 import '../../constants/enums/theme_enums.dart';
-import '../theme/interface_theme_manager.dart';
-
-
-
+import 'interface_theme_manager.dart';
 
 class ThemeNotifier extends ChangeNotifier implements IThemeManager {
-
-
   static ThemeNotifier? _instance;
   static ThemeNotifier get instance {
     _instance ??= ThemeNotifier._init();
