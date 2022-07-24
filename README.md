@@ -9,8 +9,8 @@
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/baynarkozcu/flutter_chat_app_design)](https://github.com/baynarkozcu/flutter_chat_app_design/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/baynarkozcu/flutter_chat_app_design)](https://img.shields.io/github/license/baynarkozcu/flutter_chat_app_design)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/baynarkozcu/flutter_chat_app_design)
+[![License](https://img.shields.io/github/license/baynarkozcu/flutter_chat_app_design)](LICENSE)
 
 </div>
 
