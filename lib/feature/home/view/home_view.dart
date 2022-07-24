@@ -1,7 +1,10 @@
 import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
+import '../../../core/constants/app/app_colors.dart';
 import '../../widgets/custom_bottom_app_bar.dart';
+import '../model/chat_model.dart';
 import '../model/story_model.dart';
 import '../widgets/add_story_card.dart';
 import '../widgets/message_card.dart';
@@ -18,7 +21,17 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Baynarkozcu Chat App', style: context.theme.textTheme.headline1),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,  
+          children: [
+            SvgPicture.asset(
+              "assets/images/logo.svg",
+              height: 30,
+              color: AppColors.primary,
+            ),
+            Text('Baynarkozcu Chat App', style: context.theme.textTheme.headline1),
+          ],
+        ),
       ),
       body: CustomScrollView(
         slivers: [
@@ -58,7 +71,9 @@ class _HomeViewState extends State<HomeView> {
                   if (index == 0) {
                     return const AddStoryCard();
                   }
-                  return StoryCard(story:  StoryModel.storiesList[index],);
+                  return StoryCard(
+                    story: StoryModel.storiesList[index],
+                  );
                 },
               ),
             ),
@@ -69,9 +84,12 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
           SliverList(
-            delegate: SliverChildBuilderDelegate((context, index) {
-              return const MessageCard();
-            }, childCount: 10),
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return MessageCard(chat: ChatModel.chatList[index]);
+              },
+              childCount: ChatModel.chatList.length,
+            ),
           ),
         ],
       ),

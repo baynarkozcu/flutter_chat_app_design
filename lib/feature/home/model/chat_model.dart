@@ -21,14 +21,14 @@ class ChatModel {
 
   static List<ChatModel> chatList = [
     ChatModel(
-      userPhotoUrl: 'assets/pictures/selfie_1.jpg',
+      userPhotoUrl: 'https://randomuser.me/api/portraits/women/39.jpg',
       userName: 'Linzi Coulson',
       lastMessage: 'How are you',
       messageStatus: MessageStatus.seen,
       lastMessageTime: DateTime.now(),
     ),
     ChatModel(
-      userPhotoUrl: 'assets/pictures/selfie_2.jpg',
+      userPhotoUrl: 'https://randomuser.me/api/portraits/women/26.jpg',
       userName: 'Linzi Coulson',
       lastMessage: 'Ok...',
       messageStatus: MessageStatus.sending,
@@ -37,7 +37,7 @@ class ChatModel {
       ),
     ),
     ChatModel(
-      userPhotoUrl: 'assets/pictures/selfie_3.jpg',
+      userPhotoUrl: 'https://randomuser.me/api/portraits/women/24.jpg',
       userName: 'Linzi Coulson',
       lastMessage: 'I am done',
       messageStatus: MessageStatus.sent,
@@ -46,7 +46,7 @@ class ChatModel {
       ),
     ),
     ChatModel(
-      userPhotoUrl: 'assets/pictures/selfie_4.jpg',
+      userPhotoUrl: 'https://randomuser.me/api/portraits/women/14.jpg',
       userName: 'Linzi Coulson',
       lastMessage: 'Are you finish it?',
       messageStatus: MessageStatus.seen,
@@ -55,7 +55,7 @@ class ChatModel {
       ),
     ),
     ChatModel(
-      userPhotoUrl: 'assets/pictures/selfie_5.jpg',
+      userPhotoUrl: 'https://randomuser.me/api/portraits/women/72.jpg',
       userName: 'Linzi Coulson',
       lastMessage: 'When is your birthday?',
       messageStatus: MessageStatus.seen,
@@ -64,7 +64,7 @@ class ChatModel {
       ),
     ),
     ChatModel(
-      userPhotoUrl: 'assets/pictures/selfie_6.jpg',
+      userPhotoUrl: 'https://randomuser.me/api/portraits/women/46.jpg',
       userName: 'Linzi Coulson',
       lastMessage: 'How are you.',
       messageStatus: MessageStatus.seen,

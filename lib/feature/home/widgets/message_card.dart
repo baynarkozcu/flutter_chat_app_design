@@ -3,35 +3,49 @@ import 'package:chat_app_design/core/extensions/theme_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../model/chat_model.dart';
+
 class MessageCard extends StatelessWidget {
   const MessageCard({
     Key? key,
+    required this.chat,
   }) : super(key: key);
+
+  final ChatModel chat;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: ListTile(
-        leading: const CircleAvatar(
+        leading: CircleAvatar(
           radius: 25,
-          backgroundImage: NetworkImage('https://picsum.photos/200/200'),
+          backgroundImage: NetworkImage(chat.userPhotoUrl),
         ),
-        title: Text('Username', style: context.theme.textTheme.headline3),
-        subtitle: const Text(
-          'This is a story about something a story about something',
+        title: Text(chat.userName, style: context.theme.textTheme.headline3?.copyWith(
+              color:
+                  chat.messageStatus == MessageStatus.sending ? AppColors.primary : AppColors.text,
+        )),
+        subtitle: Text(
+          chat.lastMessage,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
+          style: TextStyle(
+            color: chat.messageStatus == MessageStatus.sending ? AppColors.primary : AppColors.text,
+          ),
         ),
         trailing: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(DateFormat('hh:mm').format(DateTime.now()),
-                style: context.theme.textTheme.caption),
-            // const Icon(Icons.done),
-            const Icon(
-              Icons.done_all,
+            Text(DateFormat('hh:mm').format(chat.lastMessageTime),
+                style: context.theme.textTheme.bodyText2),
+            Icon(
+              chat.messageStatus == MessageStatus.seen
+                  ? Icons.done_all
+                  : chat.messageStatus == MessageStatus.sent
+                      ? Icons.done
+                      : Icons.access_time,
               color: AppColors.primary,
             ),
           ],
