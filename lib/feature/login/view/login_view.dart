@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../components/custom_login_text_field.dart';
 import '../../../components/social_button.dart';
+import '../services/login_services.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -58,23 +59,29 @@ class _LoginViewState extends State<LoginView> {
                     ),
                   ),
                   const SizedBox(height: 40),
-                  const SocialButton(
+                  SocialButton(
                     color: Colors.white,
                     textColor: Colors.black,
                     label: "Sign In With Google",
                     image: "assets/images/google.svg",
+                    onPressed: () {
+                      LoginService service = LoginService.instance;
+                      service.signInWithGoogle();
+                    },
                   ),
                   SocialButton(
                     color: Colors.blue[900] ?? Colors.blue,
                     textColor: Colors.white,
                     label: "Sign In With Facebook",
                     image: "assets/images/facebook.svg",
+                    onPressed: () {},
                   ),
-                  const SocialButton(
+                  SocialButton(
                     color: Colors.white,
                     textColor: Colors.black,
                     label: "Sign In With Twitter",
                     image: "assets/images/twitter.svg",
+                    onPressed: () {},
                   ),
                 ],
               ),

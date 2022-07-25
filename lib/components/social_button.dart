@@ -7,13 +7,14 @@ class SocialButton extends StatelessWidget {
     required this.label,
     this.image,
     required this.color,
-    required this.textColor,
+    required this.textColor, required this.onPressed,
   }) : super(key: key);
 
   final String label;
   final String? image;
   final Color color;
   final Color textColor;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class SocialButton extends StatelessWidget {
       height: height * 0.06,
       width: width,
       child: ElevatedButton.icon(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: image != null
             ? SvgPicture.asset(
                 image!,
