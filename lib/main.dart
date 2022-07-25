@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'core/init/theme/theme_manager.dart';
 import 'feature/home/view/home_view.dart';
+import 'feature/login/view/login_view.dart';
 import 'feature/master_page.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Baynarkozcu Chat App',
       theme: context.theme,
-      home: const MasterPage(),
+      home: const LoginView(),
     );
   }
 }

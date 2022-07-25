@@ -96,17 +96,17 @@ class LightTheme extends BaseTheme {
         ),
         inputDecorationTheme: const InputDecorationTheme().copyWith(
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(24),
             borderSide: BorderSide.none,
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(24),
             borderSide: BorderSide.none,
           ),
           filled: true,
-          fillColor: AppColors.primary,
-          // prefixIconColor: ApplicationColors.accentColor,
-          // suffixIconColor: ApplicationColors.accentColor,
+          fillColor: Colors.white,
+           prefixIconColor: AppColors.primary,
+           suffixIconColor: AppColors.primary,
           errorMaxLines: 5,
           // iconColor: ApplicationColors.accentColor,
         ),
