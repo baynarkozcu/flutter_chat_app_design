@@ -47,6 +47,9 @@ Kullanışlı ve güzel components için aşağıdaki görseli ve kod içeriğin
 
 <a name = "settings_page"><img src="https://user-images.githubusercontent.com/61154446/180663017-603c261f-80cf-4f75-ab40-8cc6275fda7f.png" width="400"></a>
 
+<br>
+
+<a name = "login_page"><img src="https://user-images.githubusercontent.com/61154446/182037528-19b5ec25-0543-4166-a773-850e06675c4d.png" width="400"></a>
 
 <br>
 <br>
@@ -55,9 +58,9 @@ Kullanışlı ve güzel components için aşağıdaki görseli ve kod içeriğin
 
 ## 🏁 Eklenecekler <a name = "todos"></a>
 
-- [Firebase Integration](https://github.com/baynarkozcu) - Detaylı bir mesajlaşma uygulaması oluşturmak için kendimi backend tarafında yormak yerine Firebase entegrasyonu ile kendimi daha çok mobil tarafta görmek istiyorum. Bu yüzden Firebase ile backend imi hızlı ve kaliteli bir şekilde çözebilirim.
+- <del>[Firebase Integration](https://github.com/baynarkozcu) - Detaylı bir mesajlaşma uygulaması oluşturmak için kendimi backend tarafında yormak yerine Firebase entegrasyonu ile kendimi daha çok mobil tarafta görmek istiyorum. Bu yüzden Firebase ile backend imi hızlı ve kaliteli bir şekilde çözebilirim.</del>
 - [Firebase Auth](https://github.com/baynarkozcu) - Kullanıcı işlemleri varsa orada tabiki Authorization işlemleri olacaktır. Backend için Firebase kullanıyorken sadece email ve şifre gibi basit Auth işlemlerinin haricinde Google, Facebook ve Github gibi çeşitli Authlar da ekleyebilirim.
-- [Auth Pages](https://github.com/baynarkozcu) - Kullanıcıların register ve login olmaları için gerekli sayfa tasarımları ve bu sayfaların kodlanması.
+- <del>[Auth Pages](#login_page) - Kullanıcıların register ve login olmaları için gerekli sayfa tasarımları ve bu sayfaların kodlanması.</del>
 - [Message Page](https://github.com/baynarkozcu) - Kullanıcıların mesajlaştığı sayfanın tasarlanması(Eğer youtube ve internette hoşuma gidecek farklı bir tasarım bulabilirsem onuda kendime göre revize edip ekleyebilirim.) ve kod a dökülmesi
 - [Profil Page](https://github.com/baynarkozcu) - Kullanıcıların bilgilerini görüntüleyebildikleri ve güncelleyebildikleri sayfanın tasarım ve kodlanması.
 - <del>[Settings Page](#settings_page) - Uygulama ayarlarının yapılandırılabildiği sayfa. Tema Değişikliğide bu sayfa içerisinden kontrol edilmektedir.</del>
